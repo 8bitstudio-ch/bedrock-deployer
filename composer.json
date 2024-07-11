@@ -1,0 +1,15 @@
+{
+  "name": "8bitstudio-ch/bedrock-deployer",
+  "description": "Deployer recipes for Roots Bedrock",
+  "require": {
+    "php": ">=8.2",
+    "vlucas/phpdotenv": "^5.3"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mathieu Zwygart",
+      "email": "mathieu@zwygart.net"
+    }
+  ]
+}
