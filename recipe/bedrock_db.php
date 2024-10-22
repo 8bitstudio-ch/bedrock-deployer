@@ -72,7 +72,7 @@ task('pull:db', function () use ($getLocalEnv, $getRemoteEnv, $urlToDomain) {
     writeln("<comment>Updating the URLs in the DB</comment>");
     runLocally("wp search-replace '{$remoteUrl}' '{$localUrl}' --skip-themes --url='{$remoteDomain}' --network");
     // Also replace domain (multisite WP also uses domains without protocol in DB)
-    $tables = runLocally("wp db tables");
+    $tables = runLocally("wp db tables --url={$remoteDomain}");
 	if(strpos($tables, 'wp_blogs') && strpos($tables, 'wp_site')){
         runLocally("wp search-replace '{$remoteDomain}' '{$localDomain}' wp_blogs wp_site --network");
     }
